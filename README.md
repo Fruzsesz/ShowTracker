@@ -4,12 +4,18 @@ A simple web application to track watched shows. Users can add, view, pick a ran
 
 Features
 
-✅ User Authentication (Register, Login, Logout)
+✅ User Authentication (Register, Login, Logout) 
+
 ✅ Add Shows to your personal watchlist
+
 ✅ View Watched Shows
+
 ✅ Pick a Random Show from your list
+
 ✅ Remove Shows from your watchlist
+
 ✅ Persistent Data Storage using JSON files
+
 ✅ Express.js Backend for API handling
 
 Tech Stack
@@ -38,10 +44,15 @@ Body: { "show": "Show Name" }
 Usage
 
 1️⃣ Register/Login to access your personal watchlist.
+
 2️⃣ Enter a show name and click "Add Show" to save it.
+
 3️⃣ Click "View Shows" to see your list.
+
 4️⃣ Click "Random Show" to get a random recommendation.
+
 5️⃣ Enter a show name and click "Remove Show" to delete it.
+
 6️⃣ Click "Logout" to end your session.
 
 Folder Structure
