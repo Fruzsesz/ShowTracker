@@ -1,11 +1,11 @@
 [
   {
-    "username": "Fru",
+    "username": "TestUser",
     "password": "123",
     "shows": [
-      "1a",
-      "b3",
-      "m1"
+      "a",
+      "b",
+      "c"
     ]
   }
 ]
