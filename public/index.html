@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="switch">Don't have an account? <a href="register.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Login successful') {
+                    window.location.href = '/dashboard'; // Redirect to the dashboard page
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+
+        
+    </script>
+</body>
+</html>
